@@ -1,8 +1,9 @@
 package com.flightmanagementsystem.exception;
 
 public class AirportManagementException extends RuntimeException {
-
-	public AirportManagementException(String message) {
-		super(message);
-	}
+    // Exception class for airport management-related issues
+    public AirportManagementException(String message) {
+        super(message);
+    }
 }
+

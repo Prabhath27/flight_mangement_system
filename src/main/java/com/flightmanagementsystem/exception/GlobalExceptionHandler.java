@@ -11,6 +11,10 @@ public class GlobalExceptionHandler {
 	public ResponseEntity<String> handleUserManagementException(UserManagementException userException){
 		return new ResponseEntity<>(userException.getMessage(),HttpStatus.NOT_FOUND);
 	}
+	@ExceptionHandler(value=AdminManagementException.class)
+	public ResponseEntity<String> handleAdminManagementException(AdminManagementException adminException){
+		return new ResponseEntity<>(adminException.getMessage(),HttpStatus.NOT_FOUND);
+	}
 	@ExceptionHandler(value=ScheduleManagementException.class)
 	public ResponseEntity<String> handleScheduleManagementException(ScheduleManagementException scheduleException){
 		return new ResponseEntity<>(scheduleException.getMessage(),HttpStatus.NOT_FOUND);

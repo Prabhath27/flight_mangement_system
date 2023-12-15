@@ -10,9 +10,14 @@ import com.flightmanagementsystem.entity.Airport;
 
 
 @Repository
-public interface AirportRepository extends JpaRepository<Airport,Integer>
-{
-	public List<Airport> findByAirportCountry(String country);
-	public List<Airport> findByAirportCity(String city);
-	public List<Airport> findByAirportName(String name);
+public interface AirportRepository extends JpaRepository<Airport,Integer> {
+    // Repository interface for performing database operations related to Airport entity
+    // Method to find airports by country
+    public List<Airport> findByAirportCountry(String country);
+
+    // Method to find airports by city
+    public List<Airport> findByAirportCity(String city);
+
+    // Method to find airports by name
+    public List<Airport> findByAirportName(String name);
 }
